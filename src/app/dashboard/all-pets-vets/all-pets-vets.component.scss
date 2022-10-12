@@ -1,0 +1,151 @@
+
+.js-simplebar{
+    background-color: #222E3C;
+    height:700px;
+    width: 80%;
+    color: white;
+ }
+ .align-middle{
+     color: white;
+ }
+ .page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+    &__box {
+      min-height: 120px;
+      background: #1e293b;
+      margin: 0 -1rem;
+      font-size: 36px;
+    }
+    &__content {
+      min-height: calc(100vh - 178px);
+      border-radius: 10px;
+      margin-top: -10rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+      &-data {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  
+.sidebar{
+    background-color: #18385c;
+    height: 601px;
+    /* width: 170px; */
+    margin-top: -83px;
+    width: 15%;
+    float: left;
+    justify-content: left;
+    text-align:center;   
+}
+.card-title{
+    color: #00000f;
+    font-size: small;
+}
+.nav-item{
+    font-size: large;
+
+}
+.nav-link{
+    color: rgb(208, 212, 215);
+    font-size:large;
+}
+.nav-link:hover{
+    background-color: #18385c;
+}
+
+.sidebar-sticky{
+    padding-top: 80px;
+}
+.doctor_layout{
+    margin-left: -99px;
+    margin-top: 15px;
+    margin-right: 45px;
+    width: 1219px;
+}
+.container{
+    width: 1000px;
+}
+.card-top{
+    width: 220px;
+    height: 98px;
+}
+.right{
+    width: 25%;
+    float: right;
+    justify-content: right;
+    text-align: left;
+}
+.row{
+    margin-bottom: 20px;
+}
+.form-control{
+    width: 140px;
+}
+.card-right{
+    margin-top:-83px;
+    margin-left: 123px;
+}
+.card-left{
+    margin-left: 11px;
+    margin-top: 14px;
+}
+.card-middle{
+    margin-left: 14px;
+    margin-top: -25px;
+    margin-bottom: -16px;
+}
+.card-bottom
+{
+    margin-bottom: 5px;
+    margin-top: -20px;
+    margin-left: 9px;
+}
+.details{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: large;
+}
+.feedback{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: large;
+}
+.vedio-call,.chat,.call{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.middle-right
+{
+    margin-top: -47px;
+    margin-bottom: 30px;
+    margin-left: 76px;
+    margin-right: 20px;
+}
+input.nosubmit {
+    border: 1px solid #555;
+    width: 100%;
+    padding: 9px 4px 9px 40px;
+     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+  }
+
+
+  
+
+
+
+
+
+
+

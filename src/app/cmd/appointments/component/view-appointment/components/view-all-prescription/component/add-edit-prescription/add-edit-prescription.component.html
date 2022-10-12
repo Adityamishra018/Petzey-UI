@@ -1,0 +1,76 @@
+<div class="modal-content modal-content1">
+    <div class="modal-header">
+        <h2> 4th Prescription Details</h2>
+    </div>
+
+    <div class="modal-body modal-body1">
+        <form [formGroup]="addMedicine" (ngSubmit)="onSubmit()">
+            <div class="formdiv">
+
+                <!--              
+                <select  formControlName="medicineName" class="inputbox " name="medicineName">
+                   
+                    <option [disabled]="!isAdd">Search For Medicine</option>
+                    <option *ngFor="let medicine of medicineList">{{medicine}}</option>
+                
+                </select> -->
+
+                <input type="text" matInput formControlName="medicineName" [matAutocomplete]="auto" class="inputbox" placeholder="Search For Medicine" />
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let medicine of medicineList" [value]="medicine">
+                        {{medicine}}
+                    </mat-option>
+                </mat-autocomplete>
+
+
+                <!-- <input type="search" class="inputbox" placeholder="Search For Medicine" name="medicineName"
+                            formControlName="medicineName"> <br>                        -->
+                <span class="spandiv">Eg:tablet,vicks</span><br>
+                <span class="error" *ngIf="addMedicine.get('medicineName')?.invalid && addMedicine.get('medicineName')?.touched
+                ">Medicine Name required</span>
+
+                <br><br>
+                <input type="number" class="inputbox" placeholder="Medicine Duration" name="duration"
+                    formControlName="duration"><br>
+                <span class="spandiv">Eg:days</span><br>
+                <span class="error"
+                    *ngIf="addMedicine.get('duration')?.invalid && addMedicine.get('duration')?.touched">Medicine
+                    Duration required</span>
+
+
+                <br><br>
+                <div>
+                    <div class="medicyclediv"><input type="text" class="medicineCycle" placeholder="Medicine Cycle"
+                            name="medicineCycle" formControlName="medicineCycle">
+                        <br>
+                        <span class="spandiv">Eg:M-A-N,M-0-N,0-A-N</span>
+                        <br>
+                        <span class="error"
+                            *ngIf="addMedicine.get('medicineCycle')?.invalid && addMedicine.get('medicineCycle')?.touched">Medicine
+                            Cycle required</span>
+
+                        <br><br>
+                    </div>
+                    <div class="togglebtndiv">
+                        <span class="food">Food</span><br>
+                        <span class="after">After</span>
+                        <span><label class="switch">
+                                <input type="checkbox" checked formControlName="take_With_Food" name="take_With_Food">
+                                <span class="slider round"></span>
+                            </label></span>
+                        <span class="before">Before</span>
+                    </div>
+                </div>
+                <input type="text" class="inputbox" placeholder="Medicine Description" name="description"
+                    formControlName="description"><br>
+                <span class="spandiv">Eg:don't use hot water to consume tablets</span>
+                <br><br>
+            </div>
+            <div class="buttondiv">
+                <button type="submit" class="btn btn-secondary addeditbtn" [disabled]="addMedicine.invalid">
+                    {{isAdd ?'Add Medicine':'Update Medicine'}}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

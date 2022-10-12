@@ -1,0 +1,30 @@
+
+ <div *ngIf="router.url === '/landing'|| router.url === '' ;else other_content">
+  <router-outlet></router-outlet>
+</div>
+<ng-template #other_content>
+  <mat-drawer-container style="background:#f2f4f7">
+    <mat-drawer mode="side" [opened]="sideBarOpen" style="width: 200px;">
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content >
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</ng-template>
+
+
+ <!-- <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+
+<div class="row">
+  <div class="col-sm-3">
+    <app-sidenav></app-sidenav>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+
+
+<!-- <router-outlet></router-outlet> -->

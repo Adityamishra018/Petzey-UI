@@ -1,0 +1,126 @@
+
+.prescription 
+{
+    float: left;
+    width: 90%;  
+    font-size: 18px;
+    font-weight:bold;
+    color:rgb(23, 23, 70) !important;
+}
+.display1
+{
+    float: left !important;
+    width: 6%;
+    font-weight: bold;
+    font-size:14px;
+    color:rgb(23, 23, 70) !important;    
+}
+.medicineList
+{     
+    height: 100px;
+    display:block;
+    width: 95%;    
+    padding: 10px 0px 0px 7px;    
+}
+.afterFood
+{
+    height: 17px;
+    width: 62%; 
+    position: relative;
+   //width: 100%;
+    background-color:rgb(23, 23, 70);
+    text-align: center;
+    font-size:0.8vw;
+    color: white;
+    margin-left: 25%;
+    border-radius: 3px;
+}
+.addprescription
+{
+    width: 10%;   
+    float: left;  
+    //margin-left:170px;
+    color: white;
+    border: none;   
+}
+.addbutton{
+    background-color: rgb(23, 23, 70);
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: large;
+}
+// .card
+// {
+//     border-radius:15px !important;  
+//     border: 1px solid rgb(33, 27, 27) !important;
+   
+//     width: 450px;
+// }
+.card
+{
+    border-radius: 0.60rem !important;  
+}
+.maindiv
+{
+    //width: 450px;  
+    margin-bottom: 10%; 
+    border-radius:15px !important;
+    border: 1px solid rgb(33, 27, 27) !important;
+    padding: 20px; 
+    margin-right: 10px;
+    height: 500px; 
+}
+.headdiv
+{
+    height: 50px;
+}
+.medicine
+{
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    height: 350px;
+}
+.medileft
+{
+    float: left !important;
+    width: 45%;
+    font-size: 14px;
+    font-weight: 400;
+    color:rgb(14, 14, 45) !important;
+}
+.mediright
+{
+    float: left !important;
+    width: 45%;
+    color:rgb(17, 17, 35) !important;
+   // padding-left: 47px;    
+}
+.advice
+{
+    font-size: 12px;
+}
+.buttondiv
+{
+   // margin-left: 50px;
+  padding-left:7.2vw;
+    width: 100%;
+}
+
+// .mat-dialog-container{
+//     padding: 0px !important;
+//     border-radius: 30px  !important;
+// }
+.deletebutton
+{
+    margin-left: 0.001vw;   
+    font-size:1.2vw;
+    background-color: white;
+    color: red;
+    border: 0;
+}
+.editbutton
+{
+    color: blue;
+   font-size:1.2vw;
+}

@@ -1,0 +1,26 @@
+
+      <div class="card">
+        <div class="card-body">
+          <h2>Tests</h2>
+          <form class="example-form">
+            <!-- Display selected list -->
+            <h4 class="head">Selected</h4>
+            <span *ngFor="let test of viewTest" class="selected ">{{test.testName}}<button type="button"
+                class="btn remove" (click)="removeItem(test.testId)">&times;</button>
+            </span>
+            <!-- Search test and onclick add test in selectedTest array -->
+            <br>
+            <h4 class="head">Search</h4>
+            <mat-form-field class="example-full-width search"  appearance="outline">
+              <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto" class="ip" />
+              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="addItem(option)"([ngModel])="selectedTest">
+                  {{option.testName}}
+                </mat-option>
+              </mat-autocomplete>
+           
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+ 

@@ -1,0 +1,29 @@
+<div class="top">
+  <span id="rec">Recommendation</span><br><br>
+
+  <div class="main">
+    <div class="column first">
+      <div id="search">Search</div>
+      <!-- <p><input #inp type="search" id="in" (keyup)="Display(inp.value)" ></p>
+            <div *ngFor ="let drName of tempArray; let i = index ">{{drName}}</div> -->
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label></mat-label>
+          <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option class="matOption" *ngFor="let option of filteredOptions | async" [value]="option.name"
+              (click)="addDoctor(option)">
+              {{option.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="column second" id="print">
+      <p *ngFor="let rec of tempArray; " class="display">
+        <span>{{rec.doctor.name}}<button id="btn" (click)='remove(rec)'>&#10006;</button>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

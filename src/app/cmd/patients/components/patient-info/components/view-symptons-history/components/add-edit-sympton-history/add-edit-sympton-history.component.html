@@ -1,0 +1,29 @@
+<div id="addsymptom">
+    <h2 id="head">Symptom Detail</h2>
+    <hr id="line">
+    <form [formGroup]="addsymptom" (ngSubmit)="onSubmit()">
+        <div id="middle">
+             <div class="input-field">
+                <input type="hidden" placeholder="Search For Symptom" name="symptomId" formControlName="symptomId">
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Search For Symptom" name="symptomName" formControlName="symptomName">
+                <p class="example">Eg:insomnia,headache</p>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Reading" name="reading" formControlName="reading">
+                <p class="example">Eg:250 Diabetes/Diabetes mellitus</p>
+            </div>
+            <div class="input-field">
+                <input type="text" placeholder="Search for Doctor" name="doctorname" formControlName="doctorname">
+            </div>
+
+        </div>
+
+        <div class="d-grid gap-2">
+            <button class="button" type="submit">
+                <h2> {{isAdd ?'Add Symptom':'Update Symptom'}}</h2>
+            </button>
+        </div>
+    </form>
+</div>

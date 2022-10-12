@@ -1,0 +1,49 @@
+#addsymptom{
+    width: 320px;
+    height: 380px;
+    border-width: 2px;
+    border-radius: 25px;
+    background-color: white;
+    
+}
+
+
+
+#head{
+    text-align: center;
+    color:#046666 ;
+}
+#addsymptom .input-field{
+    padding-top: 10px;
+    padding-left: 40px;
+}
+#addsymptom .example{
+    
+    color: grey;
+    font-size: small;
+}
+#addsymptom .input-field input{
+    outline: none;
+    border: 0;
+    border-bottom: 1.5px solid #046666;
+    width: 80%;
+}
+.button{
+    color: white;
+    background-color: #046666;
+    border: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: 70px;
+    width:100%;
+}
+#middle{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+.mat-dialog-container {
+    padding: 1px ;
+    margin: 2px;
+    border-radius: 25px;
+}
+

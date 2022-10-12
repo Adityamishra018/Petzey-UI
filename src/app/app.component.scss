@@ -1,0 +1,48 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  
+  mat-drawer {
+    width: 260px;
+  }
+  mat-drawer-container {
+    height: 100%;
+  }
+ 
+  mat-drawer {
+    background:  #18385c;
+  }
+  
+
+  body,
+html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://images.squarespace-cdn.com/content/v1/542e3dc0e4b0bf98bb7eebd4/1528780129255-UQ4QAQY5Z0VVZ5AFYBGJ/adelaide+family+children+photographer+photography_018.jpg?format=2500w");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  position: relative;
+}

@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="header">
+    <h3>Sign Up</h3>
+    <!-- <span><b>Sign Up</b></span> -->
+  </div>
+  <div class="leftclass">
+    <i><p style="font-size: 80px; color: black">CMD</p></i>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="rightclass">
+    <h1 *ngIf="cmd">Welcome to CMD</h1>
+    <h1 *ngIf="!cmd">Welcome to KKD</h1>
+    <br /><br /><br /><br />
+    <div>
+      <input
+        type="email"
+        placeholder="Enter Email"
+        #username
+        name="username"
+        id="username"
+        formControlName="username"
+        required
+      /><br /><br /><br />
+    </div>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      #password
+      name="password"
+      ng-minlength="6"
+      ng-maxlength="10"
+      id="psw"
+      formControlName="password"
+      required
+    /><br /><br /><br /><br />
+    <!-- <button type="button"   (click)="onSubmit(username,password)" class="btn btn-secondary btn-lg" enabled style="border-radius:5px">Log In</button> -->
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!loginForm.valid" (click)="nav()">Log In</button>
+    <br /><br /><br /><br />
+    <a (click)="display()">Login as doctor</a><br /><br />
+    <a (click)="display()">Login as patient</a><br /><br />
+    <!-- <a routerLink="/doctorlogin" (click)>Login as doctor</a><br><br>
+    <a routerLink="/">Login as patient</a> -->
+  </div>
+  </form>
+</div>

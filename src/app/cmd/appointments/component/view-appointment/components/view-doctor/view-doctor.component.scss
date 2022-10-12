@@ -1,0 +1,63 @@
+  .priexample-header-image {
+    // background-image: url('');
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+  }
+  
+.pridoctorsection{
+  position: relative;
+}
+.pridetail2{
+  position: absolute;
+    border-left: 1px solid lightgray;
+    padding-left: 10px;
+    right: 50px;
+    bottom: 13px;
+
+}
+
+.pre-padding{
+  padding-left: 10px !important;
+  font-size: 12px;
+  color: #162742;
+  font-weight: bold;
+
+}
+
+.prisubtle{
+    color: grey;
+}
+.pridoctor {
+ margin-left: 10px;
+  height: 190px;
+  border: 0.2px solid;
+  border-radius: 12px;
+  border-color: grey;
+  background-color: white;
+  color: #075264;
+}
+
+
+.pridetails{
+  display: flex;
+  font-size: 10px !important;
+}
+
+.pridetail1{
+  width:50%;
+}
+
+.inpre-padding{
+  padding-left: 10px !important;
+  font-size: 12px;
+}
+
+.image{
+  position: absolute;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  top:0px;
+}

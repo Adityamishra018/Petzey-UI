@@ -1,0 +1,78 @@
+<div style="margin-top:5%">
+  <mat-grid-list cols="4" style="margin-top:-35px">
+    <mat-grid-tile *ngFor="let data of fetchedAppointments">
+      <mat-card class="card">
+        <ng-container *ngIf="role==='petparent';else second">
+          
+        <img class="example-header-image" mat-card-avatar src="../../../assets/Vet1.jpg" alt="doctorimage">
+      </ng-container>
+      
+      <ng-template #second>
+        <div *ngIf="data.gender==='MALE';else female " >
+        <div class="container" style="width:50px;height:0px;margin-right: 180px;">
+
+        <img class="example-header-image"  src="../../../assets/PetIcon.png" alt="Petimage" style="width: 95px;
+        height: 88px;
+        margin-left: -24px;">
+          </div>
+        </div>
+      <ng-template #female>
+        <div class="container" style="width:50px;height:0px;margin-right: 180px;">
+        <img class="example-header-image"  src="../../../assets/catti.png" alt="Petimage" style="width: 95px;
+        height: 88px;
+        margin-left: -24px;
+        ">
+      </div>
+      </ng-template> 
+      </ng-template>
+        <div class="content" style="margin-left: 93px;
+        height: 20px;">
+          <ng-container *ngIf="role === 'vet'|| role==='receptionist';else second">
+            <mat-card-header>
+              <mat-card-title id="t2"><strong style="margin-left:-16px;">{{data.petName}}</strong></mat-card-title>
+            </mat-card-header> <br>
+            <mat-card-subtitle id="t3"><span>{{data.gender}},</span><span class="ml-3" id="Date">Age {{data.petDOB}}</span></mat-card-subtitle>
+            <mat-card-subtitle style="padding-top: 5px;" id="t3"><span>Owner: {{data.ownerName}}</span>
+            </mat-card-subtitle>
+          </ng-container>
+        </div>
+        <div class="content">
+          <ng-template #second>
+            <mat-card-header>
+              <mat-card-title id="t2"><strong>{{data.vetName}}</strong></mat-card-title>
+            </mat-card-header> <br>
+
+            <mat-card-subtitle id="t3"><span>{{data.vetSpeciality}}</span></mat-card-subtitle>
+            <mat-card-subtitle style="padding-top: 5px;" id="t4"><span>Pet: {{data.petName}}</span></mat-card-subtitle>
+          </ng-template>
+        </div>
+        <!-- <hr /> -->
+        <div class="my-appdate-apptime">
+          <mat-card-content >
+            <strong><span>{{data.appointmentTime}}</span></strong>
+            <br>
+            <strong><span>{{data.appointmentDate | date:'dd/MM/yyyy'}}</span></strong>
+          </mat-card-content>
+        </div>
+        <hr id="hr-bottom" />
+        <mat-card-actions>
+          <div class="link-container">
+            <div>
+              <a class="card-link actionLink"  (click)="viewDetails(data)"> <span>Details</span> </a>
+            </div>
+            <div>
+              <a class="card-link actionLink"> <span>View FeedBack</span> </a>
+            </div>
+          </div>
+        </mat-card-actions>
+        <!-- <div class="my-npi-no-location">
+          <hr style="width: 1px; height: 70px" id="vertical-rule" />
+          <mat-card-content>
+            <span><sup>NPI No. </sup>{{data.NPINumber}}</span><br>
+            <span><sup>Location </sup>{{data.PracticeLocation}}</span>
+          </mat-card-content>
+        </div> -->
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

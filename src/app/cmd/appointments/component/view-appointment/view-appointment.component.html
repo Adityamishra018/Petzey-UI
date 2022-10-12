@@ -1,0 +1,85 @@
+<div class="viewAppointment">
+  
+  <div class="sidebar sticky-top">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div class="container">
+    
+   
+
+    <div class="priviewappointmentdetails">
+      <div class="header sticky-top">
+        <app-top-header></app-top-header>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Button trigger modal -->
+          <button  type="button" class="btn btn-primary closeapp" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Close Appointment
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h6 class="card-subtitle mb-2">
+                    Are you sure you want to close the appointment?
+                  </h6>
+                  <p class="card-text">
+                    you won't be able to change the prescriptions and test
+                    recommanded onec you close the appointment.make sure you check
+                    them once before you confirm.
+                  </p>
+
+                  <input type="text" placeholder="comment" />
+                  <button  routerLink="/viewallappointments" type="button" data-bs-dismiss="modal" class="btn rounded left1">
+                    Confirm
+                  </button>
+                  <button type="button" class="btn rounded clr left1" data-bs-dismiss="modal">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class=" col-sm-6">
+          <app-view-patient></app-view-patient>
+        </div>
+
+        <div class=" col-sm-6 ">
+          <app-view-doctor></app-view-doctor>
+        </div>
+      </div>
+      <div class="row">
+        <div class="anjdoctable">
+          <app-view-edit-comments></app-view-edit-comments>
+        </div>
+      </div>
+      <div class="row row_4">
+        <div class="col-md-6 ">
+          <app-view-edit-recommendation></app-view-edit-recommendation>
+        </div>
+        <div class="col-md-6 ">
+          <app-view-edit-vitals></app-view-edit-vitals>
+        </div>
+      </div>
+
+      <div class="row row_5">
+        <div class="col-md-6 ">
+          <app-view-all-prescription></app-view-all-prescription>
+        </div>
+        <div class="col-md-6">
+          <app-view-edit-test></app-view-edit-test>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

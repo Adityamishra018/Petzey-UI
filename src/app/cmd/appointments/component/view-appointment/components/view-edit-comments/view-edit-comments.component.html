@@ -1,0 +1,49 @@
+
+<div class="anjdiv">
+    
+    <table class="anjdoctable" >
+        <tr>
+            <td align="left" style="color: darkblue;">
+                <h3>Comment&nbsp;&nbsp;<button *ngIf="!editable"  (click)="editclick()">Edit</button> 
+                    <button *ngIf="editable"  class="buttonclass" (click)="saveclick()">Save</button></h3>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="9" width="200%" >
+                <input  class ="text-class" *ngIf="!editable" [(ngModel)]="comment.comment_name" type="text" class="no-outline"  [value]="comment.comment_name" readonly> 
+                <input  class="text-class" *ngIf="editable" [(ngModel)]="comment.comment_name" type="text" class="outline"  [value]="comment.comment_name" >
+                
+            </td>
+            
+        </tr>
+        <tr>
+            <td *ngIf="editable"   colspan="2"> </td>
+            
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+        <td></td>
+        <td></td>
+       </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr> <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>        
+    </table>
+
+</div>
+

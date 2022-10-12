@@ -1,0 +1,113 @@
+.card{
+  // margin-bottom: 5%;
+  
+    border-color: black;
+    color: rgb(5, 5, 66);
+    border: 1px solid gray;
+      border-radius: 10px;
+    //  height: 95%;
+   // height: 235px;
+     // height:100%;
+    //  width: 340px;
+    //  margin-right: 10px;
+     margin-left:10px;
+     min-height: 235px;
+ 
+  }
+  
+  h2 {
+  
+  color: rgb(6, 6, 95);
+  
+  }
+  span{
+  
+  color:rgb(6, 6, 95);
+  }
+  
+  .span1{
+  
+    color:gray;
+    
+    }
+    
+  
+  
+  .selected
+  {
+  height: 30px;
+  width: 20px; 
+  border-color: rgb(6, 6, 110);
+   outline: none;
+  
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  
+  }
+  
+  .imgsize
+  {
+  
+  //height: 60%;
+  width:70%;
+  height: 70px;
+  // width:70px;
+  //padding: 7px;
+  }
+  
+  .imgsize1
+  {
+  
+  //height: 100%;
+  width:90%;
+   height: 100px;
+  // width:100px;
+  margin-top: -9px;
+  padding: 7px;
+  }
+  
+  
+  .selected1
+  {
+      height: 30px;
+     width: 20px; 
+     color: rgb(5, 5, 110);
+  outline:none ;
+  border: none;
+     
+  }
+
+  .buttonclass
+  {
+      background-color:  rgb(5, 5, 110);
+      color: white
+  }
+
+  
+  /*
+  .selected2
+  {
+  height: 30px;
+   width: 40px; 
+   outline: none;
+   border: none;
+   color:  rgb(5, 5, 110);
+   border-bottom: 2px solid;
+  border-color: rgb(5, 5, 110);
+  }*/
+   
+  
+  /*
+  .selected3
+  {
+   height: 30px;
+   width: 40px; 
+   outline: none;
+   border: none;
+  // border-bottom: 2px solid;
+   border-color: rgb(5, 5, 110);
+   color:  rgb(5, 5, 110);
+  }
+  */

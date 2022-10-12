@@ -1,0 +1,133 @@
+.history {
+
+    border: 1px solid black;
+    border-radius: 3px;
+
+    width: 350px;
+    height: 400px;
+    //margin-top: 20px;
+
+    margin-left: 20px;
+
+}
+
+
+.ion {
+    padding-left: 250px;
+}
+
+
+
+.btn-outline-primary {
+
+    size: 10px;
+    text-align: center;
+
+    padding-left: 50px;
+
+    border: 2px solid;
+
+    margin-left: 80px;
+
+    margin-top: 1px;
+
+}
+
+.btn-info {
+
+    width: 80px;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+.numberCircle {
+    border-radius: 60%;
+    width: 25px;
+    height: 15px;
+    padding: 0px;
+    margin-left: 42px;
+    margin-right: 50px;
+
+
+
+    background: red;
+    border: 1px solid #666;
+    color: white;
+    text-align: center;
+
+    font: 15px Arial, sans-serif;
+}
+
+h5 {
+    opacity: 1;
+    font-family: initial;
+    font-style: normal;
+    margin-right: 0px;
+}
+
+hr {
+    margin-top: 8px;
+}
+
+.visit {
+    padding-left: 150px;
+}
+
+
+.header {
+    color: #1589FF;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.editbtn {
+    border: none;
+    background-color: white;
+}
+
+.deletebutton {
+    color: red;
+    background-color: white;
+    border: none;
+}
+
+.diabities {
+
+    .symname {
+
+        padding-left: 0px;
+
+        display: flex;
+
+        .visit {
+
+            padding-left: 100px;
+
+            display: flex;
+
+            .show {
+
+                padding-left: 50px;
+ 
+            }
+
+            .edit {
+                    padding-left: 10px;
+            }
+
+            
+
+        }
+
+    }
+
+}
+.showhide{
+    background-color: white;
+    border: none;
+}

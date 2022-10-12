@@ -1,0 +1,61 @@
+
+#dog{
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+}
+#pet{
+    background-color: #f0dcd5;
+        color: #ba3b14;
+        border-radius: 10px;
+        padding: 2px;
+        /* font-family: Roboto; */
+        margin: 2px;
+}
+.symptomdropdown{
+    margin-left: 40px;
+}
+.symptombutton{
+    margin-left:-32px;
+}
+.petcard-vd{
+width: 80vw;
+padding-left: 12px;
+}
+.medicine{
+    overflow: scroll;
+    height: 539px;
+    
+}
+.butn {
+    background-color: #f0dcd5;
+    color: #ba3b14;
+    border: none;
+}
+
+.shri {
+    display: flex;
+    color: orange;
+}
+
+
+
+.fa-solid {
+    font-size: 16px;
+}
+
+.shri .ratna span {
+    height: 1px;
+    width: 25px;
+    color: orange;
+    font-size: 20px;
+}
+
+
+.circle {
+    color: #999;
+}
+
+.circle:hover {
+    color: #000;
+}

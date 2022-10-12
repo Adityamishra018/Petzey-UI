@@ -1,0 +1,41 @@
+<div class="card maindiv">
+
+    <div class="headdiv">
+        <div class="prescription"><span>Prescriptions</span></div>
+        <div class="addprescription">
+            <button type="button" class="addbutton" data-bs-toggle="modal" data-bs-target="#popup"
+                (click)="addPre()">+</button>
+        </div>
+    </div>
+
+    <div class="medicine">
+        <div class="medicineList card" *ngFor="let medicine Of medicines;trackBy:trackbyMedicine;">
+            <div class="display1"><span>1.</span></div>
+            <div class="medileft">
+                <span>{{medicine.medicineName}}
+
+                </span>
+                <br>
+                <span class="advice">
+                    {{medicine.description}}
+                </span>
+            </div>
+
+            <div class="mediright">
+                <div class="buttondiv">
+
+
+                    <i class="fa fa-edit editbutton" data-bs-toggle="modal" data-bs-target="#popup"
+                        (click)="editPre(medicine.prescriptionId)"></i>
+                    <button class="deletebutton" (click)="deletePrescription(medicine.prescriptionId)">
+                        X
+                    </button>
+
+                </div>
+                <div class="afterFood">{{medicine.take_With_Food?'Before Food':'After Food'}}</div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

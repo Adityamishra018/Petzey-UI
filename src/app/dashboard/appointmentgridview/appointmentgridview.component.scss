@@ -1,0 +1,85 @@
+img{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.i-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.i-container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    font-size: 30px;
+    font-weight: bold;
+}
+.date{
+    font-size: small;
+    padding-top: 5px;
+}
+.vr-sm {
+    padding: 0;
+    border-left: 1px solid rgb(228, 226, 226);
+    height: 20px;
+}
+.vr {
+    padding: 0;
+    border-left: 1px solid black;
+    height: 80px;
+}
+.card{
+    width: 230px;
+    height: 230px;
+    border-radius: 7px;
+}
+a {
+    text-decoration: none;
+}
+.link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+.symptom {
+    font-style: italic;
+    font-size: small;
+    font-weight: lighter;
+    text-align: center;
+}
+.actionLink {
+    cursor: pointer;
+}
+
+.i{
+    padding: 5px;
+}
+.content{
+    float:right;
+    margin-left: 15px;
+}
+.my-appdate-apptime{
+    margin-top:99px;
+
+}
+.hr-bottom{
+    margin-top:0;
+}
+.link-container{
+    margin-top: -13PX;
+}
+
+.img-margin{
+    margin-top: -80px;
+}
+

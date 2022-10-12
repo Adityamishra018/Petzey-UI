@@ -1,0 +1,114 @@
+<div class="container">
+
+    <h5 class="title">Feedback Form
+        <a routerLink="/viewallappointments"> <button matDialogClose type="button" class="btn-close"
+                (click)="onSubmit()" aria-label="Close"></button></a>
+    </h5>
+    <hr>
+
+    <form [formGroup]="doctorForm">
+        <div class="ml-3">
+            <p>1.How satisfied you are with the competence of doctor</p>
+            <div class="row" style="width: 50%;">
+                <div class="col number" id="content1">
+                    <input type="radio" id="one" formControlName="q1" [value]="1" /><br>
+                    <label class="label1">1</label>
+                </div>
+                <div class="col number" id="content2">
+                    <input type="radio" id="two" formControlName="q1" [value]="2" /><br>
+                    <label class="label1">2</label>
+                </div>
+                <div class="col number" id="content3">
+                    <input type="radio" id="three" formControlName="q1" [value]="3" /> <br>
+                    <label class="label1">3</label>
+                </div>
+                <div class="col number" id="content4">
+                    <input type="radio" id="four" formControlName="q1" [value]="4" /><br>
+                    <label class="label1">4</label>
+                </div>
+                <div class="col number" id="content5">
+                    <input type="radio" id="five" formControlName="q1" [value]="5" /><br>
+                    <label class="label1">5</label>
+                </div>
+            </div>
+            <p>2.How satisfied you are with the outcome of treatment.</p>
+            <div class="row" style="width: 50%;">
+                <div class="col number" id="content1">
+                    <input type="radio" id="one" formControlName="q2" [value]="1" /><br>
+                    <label class="label1">1</label>
+                </div>
+                <div class="col number" id="content2">
+                    <input type="radio" id="two" formControlName="q2" [value]="2" /> <br>
+                    <label class="label1">2</label>
+                </div>
+                <div class="col number" id="content3">
+                    <input type="radio" id="three" formControlName="q2" [value]="3" /> <br>
+                    <label class="label1">3</label>
+                </div>
+                <div class="col number" id="content4">
+                    <input type="radio" id="four" formControlName="q2" [value]="4" /><br>
+                    <label class="label1">4</label>
+                </div>
+                <div class="col number" id="content5">
+                    <input type="radio" id="five" formControlName="q2" [value]="5" /><br>
+                    <label class="label1">5</label>
+                </div>
+            </div>
+            <p>3.Would you refer this doctor to others.</p>
+            <div class="row" style="width: 50%;">
+                <div class="col number" id="content1">
+                    <input type="radio" id="one" formControlName="q3" [value]="1" /><br>
+                    <label class="label1">1</label>
+                </div>
+                <div class="col number" id="content1">
+                    <input type="radio" id="two" formControlName="q3" [value]="2" /><br>
+                    <label class="label1">2</label>
+                </div>
+                <div class="col number" id="content3">
+                    <input type="radio" id="three" formControlName="q3" [value]="3" /><br>
+                    <label class="label1">3</label>
+                </div>
+                <div class="col number" id="content4">
+                    <input type="radio" id="four" formControlName="q3" [value]="4" /><br>
+                    <label class="label1">4</label>
+                </div>
+                <div class="col number" id="content5">
+                    <input type="radio" id="five" formControlName="q3" [value]="5" /><br>
+                    <label class="label1">5</label>
+                </div>
+            </div>
+            <p>4.How satisfied you are with the process of booking appointment.</p>
+            <div class="row" style="width: 50%;">
+                <div class="col number" id="content1">
+                    <input type="radio" id="one" formControlName="q4" [value]="1" /><br>
+                    <label class="label1">1</label>
+                </div>
+                <div class="col number" id="content2">
+                    <input type="radio" id="two" formControlName="q4" [value]="2" /><br>
+                    <label class="label1">2</label>
+                </div>
+                <div class="col number" id="content3">
+                    <input type="radio" id="three" formControlName="q4" [value]="3" /> <br>
+                    <label class="label1">3</label>
+                </div>
+                <div class="col number" id="content4">
+                    <input type="radio" id="four" formControlName="q4" [value]="4" /><br>
+                    <label class="label1">4</label>
+                </div>
+                <div class="col number" id="content5">
+                    <input type="radio" id="five" formControlName="q4" [value]="5" /><br>
+                    <label class="label1">5</label>
+                </div>
+
+                <div>
+                    <p>Additional Comments </p>
+                    <textarea class="cmt" name="comment" id="comment" cols="30" rows="3" formControlName="comment"
+                        value="comment" placeholder="wonderful doctor!"></textarea>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>

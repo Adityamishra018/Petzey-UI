@@ -1,0 +1,69 @@
+<div class="container">
+    <mat-card style="width:700px;height:300px;margin-left:100px;margin-top:30px;">
+        <mat-card-header class="d-flex justify-content-between" style="margin-bottom:-22px">
+            <div>
+                <mat-card-title id="t1">Account Details</mat-card-title>
+                <mat-card-subtitle id="t3">Manage Your Account here</mat-card-subtitle>
+            </div>
+            <button class="btn btn-danger" style="margin-left: 379px;
+            width: 54px;
+            height: 35px;
+            color: white;" (click)="openDialog()">Edit</button>
+        </mat-card-header>
+       <hr>
+        <div class="d-flex flex-row;">
+            <img class="example-header-image" style="width:120px;height:120px;margin-top: 30px;"
+                src="../../assets/HeaderVet.jpg" alt="img" mat-card-avatar>
+            <div style="margin-top:100px">
+                <mat-card-content style="margin-left: 56px;
+                margin-top: -58px;">
+                    <table>
+                        <tr>
+                            <td style="padding: 0 15px;">
+                                <span id="name" *ngIf="vet">
+                                    Name:<strong> {{vet.VetName}}</strong><br />
+                                </span>
+                            </td>
+                            <td style="padding:0 30px ;">
+                                <span id="phnNo" *ngIf="vet">
+                                    Mobile No:<strong>{{vet.VetContactInfoDTO.PhoneNum}}</strong>
+                                </span>
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td style="padding: 0 15px;">
+                                <span id="nipNo" *ngIf="vet">
+                                    NPINo:<strong>{{vet.NPINum}}</strong>
+                                </span>
+                            </td>
+                            <td style="padding:0 30px ;">
+                                <span id="email" *ngIf="vet">
+                                    Email: <strong>{{vet.VetContactInfoDTO.EmailId}}</strong>
+                                </span>
+                            </td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td style="padding:0 15px;">
+                                <span id="speciality" *ngIf="vet">
+                                    Speciality:<strong>{{vet.Speciality}}</strong>
+                                </span>
+                            </td>
+                            <td style="padding:0 30px ;">
+                                <span id="clinic" *ngIf="vet">
+                                    Clinic: <strong>{{vet.VetContactInfoDTO.ClinicAddress}}</strong>
+                                </span>
+                            </td>
+                        </tr>
+                        <br>
+                    </table>
+
+                    <br />
+
+                </mat-card-content>
+            </div>
+        </div>
+
+    </mat-card>
+</div>

@@ -1,0 +1,106 @@
+.modal-content {
+  border-radius: 15px;
+  width: 75%;
+}
+.row
+{
+margin-top: 2%;
+width:95%;
+}
+
+.card-subtitle {
+  color: rgb(16, 16, 110);
+  font-weight: bold;
+  font-size: 15px;
+}
+.card-text {
+  color: rgb(16, 16, 110);
+  font-size: 12px;
+}
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: rgb(16, 16, 110);
+  margin-bottom: 25px;
+  width: 100%;
+}
+.closeapp {
+  float: right;
+}
+.btn {
+  background-color: rgb(37, 37, 97);
+  color: white;
+  margin-top: 15px;
+  padding: 5px;
+  outline: 0px;
+}
+.clr {
+  background-color: rgb(236, 227, 227);
+  color: rgb(16, 16, 110);
+  border-color: 1px solid rgb(16, 16, 110);
+  margin-left: 15px;
+  outline: 0px;
+}
+#demo {
+  margin-left: 5%;
+}
+.priviewappointmentdetails {
+  //float: left;  
+  margin-top:10%;
+  margin-left:13%;
+  padding-left:5%;
+  // position:relative;
+  border: 0.2px solid;
+  border-color: grey;
+  background: lightgrey;
+  border-radius: 15px;
+  //width: 1000px;
+   width:96%;
+}
+
+
+
+.anjdoctable {
+ //position: relative;
+  border: 1px solid blue;
+  border-radius: 10px;
+  background-color: white;
+  border-color: gray;
+  margin-top: 25px;
+  margin-left:5px;
+  width: 99%;
+  height: 125px;
+}
+.row_5
+{
+  //padding-bottom: 35px;
+}
+.sidebar{
+  float: left;
+  height:100%;
+  width: 15%;
+  position:fixed;
+}
+.viewAppointment
+{  
+  width: 85%;
+  
+  height: 100%;
+  margin-left: 7.5%;  
+}
+.container{
+ 
+  width:85% !important;
+  //margin-top:8%; 
+   padding-bottom:4%;
+ 
+}
+.header{
+  //margin-left:8.1%;
+  margin-left:-12.5%;
+  position:fixed;
+ 
+  height:5%;
+  margin-bottom: 10%; 
+
+}

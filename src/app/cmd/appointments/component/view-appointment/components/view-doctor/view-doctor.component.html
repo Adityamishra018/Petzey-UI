@@ -1,0 +1,45 @@
+ <div class="pridoctorsection">
+    <mat-card class="pridoctor">
+      <mat-card-header>
+        <div mat-card-avatar class="priexample-header-image"></div>
+        <mat-card-subtitle class="prisubtle">Doctor</mat-card-subtitle>
+        <mat-card-title>{{doctor.name}}</mat-card-title>
+        <mat-card-subtitle class="prisubtle">{{doctor.specialist}}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <section class="pridetails">
+        <table class="pridetail1">
+            <tr>
+              <td>
+                <i class="fa fa-phone">&nbsp;&nbsp;{{doctor.mobileNumber}}</i>
+              </td>
+            </tr>
+            <br>
+            <tr>
+              <td>
+                <i class="fa fa-envelope">&nbsp;&nbsp;{{doctor.mailId}}</i>
+              </td>
+            </tr>
+          </table>
+        <table class="pridetail2">
+          <tr>
+            <td>
+              <span class="pre-padding">NPI no. <br></span><span class="inpre-padding">{{doctor.npi}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="pre-padding">Practice Location <br></span><span class="inpre-padding">{{doctor.pracLocation}}</span>
+            </td>  
+          </tr>
+        </table>   
+      </section>
+      <img [src]="imgsrcM" class="image" alt="...">
+      </mat-card-content>
+    </mat-card>
+    <!-- <div class="profilepic">
+      <img [src]="imgsrcM" class="image" alt="...">
+    </div> -->
+  </div> 
+

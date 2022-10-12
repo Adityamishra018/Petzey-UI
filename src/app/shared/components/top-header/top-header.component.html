@@ -1,0 +1,97 @@
+<!-- <div class="topHead ">
+    <div class="row">
+
+        <div id='t' *ngIf='activePageName == "dashboard"' class="col-md-4 col-xl-3 col-xs-4 col-12"
+            style="color: black; font-size: 25px; font-weight: bolder;margin-top: 0.2em;">
+            Appointments
+        </div>
+        <div *ngIf='activePageName == "dashboard"' (click)="logOutApplication(select.value)"
+            class="col-md-6 col-xl-3 col-12" style="text-align: right; margin-top: 0.5em;margin-left: 50%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+            </svg>
+            <select id="user" #select style="
+    width: 80px;
+    height: 28px;
+    border: none;
+    font-size: 10px;
+    margin-left: 1em;
+    ">
+                <option [value]="user.doctor_name" selected>
+                    {{ user.doctor_name }}
+                </option>
+                <option  [routerLink]="['/landing']" value="logout" >LogOut</option>
+
+            </select>
+            <img style="width: 2em; height: 2em" [src]="user.doctor_profile_image" />
+        </div>
+
+        <div *ngIf='activePageName != "dashboard"' (click)="logOutApplication(select.value)"
+            class="col-md-6 col-xl-3 col-12" style="text-align: right; margin-top: 0.5em;margin-left: 75%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+            </svg>
+            
+            <select id="user" #select style="
+    width: 80px;
+    height: 28px;
+    border: none;
+    font-size: 10px;
+    margin-left: 1em;
+    "  > 
+                <option [value]="user.doctor_name" selected>
+                    {{ user.doctor_name }} John Doe
+                </option>
+            <option   >Status:Online</option>
+            <option   >AccountSettings</option>    
+            <option   >Profile</option>
+            <option  [routerLink]="['/landing']"   > Logout  </option>
+           
+            </select>
+            
+            
+            
+            <img style="width: 2em; height: 2em" [src]="user.doctor_profile_image" />
+        </div>
+    </div> -->
+
+    <section>
+        <div class="container">
+          <div class="headPart">
+             <div class="status">
+               <div class="statusDetails" (click)="drop(dropdwon)">
+              <h4><fa-icon [icon]="faBell" class="fa-1x" ></fa-icon>
+                John Doe  <fa-icon [icon]="faChevronDown" class="fa-1x" ></fa-icon></h4>
+                <img src="{{img}}" alt="" srcset="" style="width: 25px; height: 25px; border-radius: 100%;">
+            </div>
+             <div  id="drop" class="{{dropdwon}}">
+                                <ul  onclick="list()" >
+                                  <li>
+                                    Status:Online
+                                    <div class="divd"></div>
+                                  </li>
+                                    <li>
+                                       AccountSettings
+                                        <div class="divd"></div>
+                                    </li>
+                                    <li>
+                                        Profile
+                                        <div class="divd"></div>
+                                    </li>
+                                  <li >
+                                  <!-- <a  routerLink="/doctorlogin" > Logout</a> -->
+                                  <a href="landing">Logout</a>
+                                  </li>
+        
+                                </ul>
+                        </div>
+          </div>
+          </div>
+          
+        </div>
+        </section>
+        <router-outlet></router-outlet>

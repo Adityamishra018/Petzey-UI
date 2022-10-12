@@ -1,0 +1,47 @@
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <b>All Appointments</b>
+      </div>
+      <div class="d-flex">
+        <div class="row">
+          <div class="col-auto align-self-center" *ngIf="showGrid">
+            <form>
+              <div class="row g-2 align-items-center">
+                <div class="col-auto">
+                  <label for="filterAppointment" class="col-form-label"
+                    (click)="openCalenderDialog()">Select Date</label>
+                </div>
+                <div class="calender-icon" [class]="showGrid ? 'unSelect' : 'select'" id="calender-icon">
+                </div>
+
+                <div class="col-auto">
+                  <label for="filterAppointment" class="col-form-label" style="width: 14px;">Filter:</label>
+                </div>
+                <div class="col-auto">
+                  <select name="filterAppointment" class="form-select form-select-sm" (change)="SelectChange($event)">
+                    <option value="All" selected>All</option>
+                    <option value="CANCELLED">Cancelled</option>
+                    <option value="CLOSED">Closed</option>
+                    <option value="CONFIRMED">Confirmed</option>
+                    <option value="OPEN">Open</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-auto align-self-center">
+            <a class="btn btn-sm  new-appointment" (click)="newAppointment()"><i class="bi bi-plus-lg"></i>+ New Appointment</a>
+          </div>
+          <div class="col-auto align-self-center icon-container icon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<hr id="hr-bottom" />
+<app-appointmentgridview>
+</app-appointmentgridview>

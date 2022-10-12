@@ -1,0 +1,57 @@
+<div id="demo26">
+
+
+    <div>
+        <table>
+            <tr>
+                <td id="demo1">
+                    <h2>Appointment History</h2>
+                </td>
+                <td>
+                    <div id="demo9">
+                        <select id="demo8">
+                            <option>2017</option>
+                            <option>2016</option>
+                            <option>2015</option>
+                        </select>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr id="demo2"><br>
+    <div id="demo17" *ngFor="let Appointment of appointmenthistory">
+        <table>
+            <tr>
+                <td>
+                    <h4 id="demo3">A</h4>
+                </td>
+                <td>
+                    <h3 id="demo4">{{Appointment.doctorname}}<br><span id="demo10">{{Appointment.specialist}}</span>
+                    </h3>
+                </td>
+                <td><i class="material-icons" id="demo13">access_time</i></td>
+                <td>
+                    <h5 id="demo35">{{Appointment.time}}</h5>
+                </td>
+                <td>
+                    <p id="demo14">{{Appointment.appointmentDate}}</p>
+                </td>
+
+            </tr>
+        </table>
+        <div>
+            <table>
+                <tr>
+                    <td><i class="material-icons" id="demo11">assignment</i></td>
+                    <td>
+                        <p id="demo12">{{Appointment.comment}}</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div><br><br>
+
+</div>

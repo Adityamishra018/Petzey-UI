@@ -1,0 +1,93 @@
+.mat-dialog-container{
+  border-radius: 25px;
+  padding: 0px;
+}
+
+
+  .color {
+    color: darkblue;
+  }
+  .para {
+    color: darkblue;
+  }
+  .button {
+    background-color: darkblue;
+    color: white;
+  }
+ 
+  .commentsection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    margin: opx;
+  }
+  .container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+  .title {
+    color: rgb(16, 16, 110);
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 10px;
+    font-size:24px;
+  }
+  
+
+ 
+  .btn-close {
+    margin-right: 10px;
+    float: right;
+    font-size: small;
+  }
+  p {
+    color: rgb(16, 16, 110);
+    font-weight: bold;
+    font-size: small;
+    margin-bottom: 0px;
+        border-left-width: 10px;
+    margin-left: 10px;
+  }
+  .cmt{
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .number {
+    padding-left: 0px;
+    margin-left: 0px;
+    width: 40px;
+  }
+  #content1,#content2,#content3,#content4,#content5 {
+    margin: 0px;
+    height: 50px;
+    padding-right: 0px;
+    width: 40px;
+  }
+  
+  
+  #radiobtn {
+    margin-left: 0px;
+  }
+  .label1 {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 40px;
+  }
+  form {
+    display: inline;
+    border: none;
+  }
+  .b1 {
+    color: rgb(231, 231, 246);
+    background-color: rgb(16, 16, 110);
+    
+  }
+  

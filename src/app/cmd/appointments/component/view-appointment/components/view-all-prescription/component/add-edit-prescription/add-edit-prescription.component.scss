@@ -1,0 +1,169 @@
+.modal-body1 {
+    padding: 0px;
+}
+.spandiv  {
+    font-size: 13px;
+    color: #e2cece;
+}
+.before
+{  
+    font-size: 12px;
+    float: left;
+    margin-top: 5px;
+    font-weight: 500;     
+}
+.medicyclediv
+{
+    float:left;
+    width: 50%;
+}
+.togglebtndiv
+{
+    float:left;
+    width: 50%;
+}
+.food
+{
+    color:grey;
+    font-weight: 500;
+    font-size: 14px;
+}
+.addeditbtn
+{
+    text-align:center !important;
+    background-color: #075264 !important;
+    border-top:none;
+    width: 99.97% !important;
+    font-size:28px !important;
+    font-weight: 400 !important;
+    color: white;
+   // margin:0px -2px -20px -10px !important;
+    //margin-left: -10px;
+    height:60px;
+    border-bottom-left-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+    border-color:white !important;
+}
+.formdiv {
+    padding: 40px 0px 0px 50px;
+}
+
+.switch {
+    position: relative;
+    width: 47px;
+    height: 28px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.after {
+    font-size: 12px;
+    float: left;
+    font-weight: 500;
+    margin: 5px 10px 0px 0px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.inputbox {
+    border-top: none !important;
+    font-size: 16px;
+    border-left: none !important;
+    border-bottom: 1px solid !important;
+
+    border-right: none !important;
+    width: 80%;
+}
+
+.medicineCycle {
+    border-top: none !important;
+    font-size: 16px;
+    border-left: none !important;
+    border-bottom: 1px solid !important;
+    border-right: none !important;
+    width: 80%;
+}
+
+.buttondiv {
+    height: 60px;   
+    border: 0px;
+    margin-bottom: -11px;
+    margin-left: -11px;
+    margin-right: -11px;
+}
+
+.modal-content {
+    height: 100%;
+    border-radius: 3rem;
+    width: 100%;  
+}
+
+.modal-header h2 {
+    color: rgb(103, 103, 163);   
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.modal-header
+{
+    border-bottom: 2px solid #e2cece !important;
+    text-align: center !important;
+    display:block;
+}
+.mat-dialog-container{
+    padding: 0px !important;
+    border-radius: 30px  !important;
+}
+.error{
+    color: red;
+}

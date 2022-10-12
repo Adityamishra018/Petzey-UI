@@ -1,0 +1,32 @@
+<div class="pripatientsection">
+  <mat-card class="pripatient">
+    <mat-card-header>
+      <div mat-card-avatar class="priexample-header-image"></div>
+      <mat-card-subtitle class="prisubtle">Patient</mat-card-subtitle>
+      <mat-card-title>{{patient.name}}</mat-card-title>
+      <mat-card-subtitle class="prisubtle">{{patient.gender}},Age {{patient.age}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <section class="pridetails">
+        <section class="pridetail1">
+          <p>
+            <i class="fa fa-phone">&nbsp;&nbsp;{{patient.mobileNumber}}</i>
+          <p>
+            <i class="fa fa-envelope">&nbsp;&nbsp;{{patient.mailId}}</i>
+          </p>
+        </section>
+        <section class="pridetail2">
+          <p>
+            <i class="fa fa-calendar">&nbsp;&nbsp;{{patient.dob}}</i>
+          </p>
+          <p>
+            <img src="https://www.kindpng.com/picc/m/4-42585_blood-drop-drop-icon-free-hd-png-download.png" alt=""
+              width="15" height="15">&nbsp;&nbsp;{{patient.bloodGroup}}
+          </p>
+        </section>
+      </section>
+      <img [src]="imgsrcM" class="image" alt="...">
+    </mat-card-content>
+  </mat-card>
+</div> 

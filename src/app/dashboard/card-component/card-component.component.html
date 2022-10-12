@@ -1,0 +1,52 @@
+<div style="margin-top:1%;margin-bottom: 2px;">
+  <mat-grid-list cols="4" style="margin-top: -35px" rowHeight="150px">
+    <div class="content">
+      <ng-container *ngIf="role === 'vet'||role==='receptionist';else second">
+        <mat-grid-tile *ngFor="let data of petdetails">
+          <mat-card class="card allcards" style="height: 120px;width:237px">
+            <div class="d-flex flex-row">
+              <ng-container *ngIf="data.gender==='MALE'else second">
+              <img class="example-header-image" mat-card-avatar src="../../../assets/PetIcon.png" style="height: 75px;
+              width: 82px;">
+              </ng-container>
+              <ng-template #second>
+                <img class="example-header-image" mat-card-avatar src="../../../assets/catti.png" style="height: 75px;
+                width: 82px;">
+              </ng-template>
+              <div class="padding-left:30px">
+              <mat-card-header>
+                <div class="allpets-title">
+                  <mat-card-title id="t2"><strong>{{data.Name}}</strong></mat-card-title>
+                </div>
+              </mat-card-header>
+              <div class="allpets-subtitle">
+                <mat-card-subtitle id="t3"><span>{{data.gender}},</span><span id="Date"></span></mat-card-subtitle>
+                <mat-card-subtitle style="padding-top: 5px;" id="t3"><span>Owner:{{data.OwnerName}}</span>
+                </mat-card-subtitle>
+              </div>
+            </div>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+      </ng-container>
+    </div>
+    <div class="content">
+      <ng-template #second>
+        <mat-grid-tile *ngFor="let data of vets">
+          <mat-card class="card allcards">
+            <mat-card-header>
+              <img class="example-header-image" mat-card-avatar src="">
+              <mat-card-title id="t2"><strong>{{data.VetName}}</strong></mat-card-title>
+            </mat-card-header> <br>
+
+            <mat-card-subtitle id="t3"><span>{{data.Speciality}}</span></mat-card-subtitle>
+            <mat-card-subtitle style="padding-top: 5px;" id="t4"><span>Mobile :</span><strong>
+                {{data.ContactInfo.PhoneNum}}</strong>
+            </mat-card-subtitle>
+          </mat-card>
+        </mat-grid-tile>
+      </ng-template>
+    </div>
+    <hr />
+  </mat-grid-list>
+</div>

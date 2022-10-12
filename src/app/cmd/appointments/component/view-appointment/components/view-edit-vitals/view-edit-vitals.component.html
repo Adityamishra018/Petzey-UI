@@ -1,0 +1,99 @@
+
+            <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                  <h2>Vitals &nbsp;&nbsp;
+                   
+                   <button  *ngIf="!ReadMore" (click)="editclick()" >Edit</button>
+                   <button  *ngIf="ReadMore" class="buttonclass"  (click)="saveclick()" >Save</button>
+                   </h2>
+                 
+                  
+          
+                    <div class="card-text">
+                      <div class="row">
+                          <div class="col-lg-2">
+                              <span>ECG</span>
+                            </div>
+              
+                          <div class="col-lg-3 offset-1">
+                           
+                               <span>Temperatur</span> 
+                            </div>
+              
+                          <div class="col-lg-3">
+                              <span>Diabetes</span>
+                             </div>
+              
+                          <div class="col-lg-3 ">
+                              <span>Respiration</span>    
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-2">
+                              <span class="text-centre" ><img [src]= ImgSrc1 class="imgsize"></span>
+                              </div>
+                
+                            <div class="col-lg-3 offset-1">
+                             
+                                <span class="text-centre" ><img [src]= ImgSrc2 class="imgsize"></span>
+                              </div>
+                
+                            <div class="col-lg-3">
+                                <span class="text-centre" ><img [src]=ImgSrc3 class="imgsize"></span>
+                               </div>
+                
+                            <div class="col-lg-3 ">
+                                <span class="text-centre" ><img [src]=ImgSrc4 class="imgsize1"></span>  
+                              </div>
+                          </div>
+
+
+                          
+
+
+
+                          <div class="row">
+                           
+                            <div class="col-lg-3">
+                              <span class="span1">
+                           <input *ngIf ="ReadMore"  matInput  [(ngModel)]=vital.ecg class="selected" >
+                           <input *ngIf ="!ReadMore"  matInput readonly  [(ngModel)]=vital.ecg class="selected1" >
+                            BPM</span>
+                          </div>
+
+                          <div class="col-lg-3">
+                            <span  class="span1">
+                         <input *ngIf ="ReadMore"  matInput [(ngModel)]=vital.temperature class="selected" >
+                         <input *ngIf ="!ReadMore"  matInput  readonly  [(ngModel)]=vital.temperature class="selected1" >
+                          C</span>
+                        </div>
+
+                        <div class="col-lg-3">
+                          <span  class="span1">
+                       <input *ngIf ="ReadMore"  matInput [(ngModel)]=vital.diabetes class="selected" >
+                       <input *ngIf ="!ReadMore"  matInput  readonly  [(ngModel)]=vital.diabetes class="selected1" >
+                        mg/dl</span>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <span  class="span1">
+                     <input *ngIf ="ReadMore"  matInput  [(ngModel)]=vital.respiration_rate class="selected" >
+                     <input *ngIf ="!ReadMore"  matInput  readonly [(ngModel)]=vital.respiration_rate class="selected1" >
+                      BPM</span>
+                    </div>
+                             </div> 
+                          </div>
+                      </div>
+                     
+                  </div>
+              </div>
+            
+              
+    
+
+
+
+
+

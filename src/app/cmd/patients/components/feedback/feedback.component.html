@@ -1,0 +1,69 @@
+<div>
+  <form [formGroup]="doctorForm1" #userPost="ngForm" >
+  <div [class]="class1">
+  <section>
+  <h2 [class]="class3">Feedback Form</h2>
+  <hr />
+  <p [class]="class4">
+  1.How Satisfied are you with the competence of the doctor?
+  </p>
+  
+  <div>
+  <label [class]="class2">
+  <input [attr.disabled]=disableState [(ngModel)]="Q1" formControlName="q1" type="radio" id="radiobutton" value="1"/>1</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q1" formControlName="q1" type="radio" id="radiobutton" value="2" />2</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q1" formControlName="q1" type="radio" id="radiobutton" value="3" />3</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q1" formControlName="q1" type="radio" id="radiobutton" value="4" />4</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q1" formControlName="q1" type="radio" id="radiobutton" value="5" />5</label>
+  </div>
+  
+  
+  
+  
+  <p [class]="class4">
+  2.How Satisfied are you with the outcome of treatment?
+  </p>
+  <div>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q2" formControlName="q2" type="radio" id="radiobutton" value="1" />1</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q2" formControlName="q2" type="radio" id="radiobutton" value="2" />2</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q2" formControlName="q2" type="radio" id="radiobutton" value="3" />3</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q2" formControlName="q2" type="radio" id="radiobutton" value="4" />4</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q2" formControlName="q2" type="radio" id="radiobutton" value="5" />5</label>
+  </div>
+  
+  <p [class]="class4">3.Would you refer this doctor to others?</p>
+  <div>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q3" formControlName="q3" type="radio" id="radiobutton" value="1" />1</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q3" formControlName="q3" type="radio" id="radiobutton" value="2" />2</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q3" formControlName="q3" type="radio" id="radiobutton" value="3" />3</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q3" formControlName="q3" type="radio" id="radiobutton" value="4" />4</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q3" formControlName="q3" type="radio" id="radiobutton" value="5" />5</label>
+  </div>
+  
+  <p [class]="class4">
+  4.How Satisfied are you with the process of booking appoinment?
+  </p>
+  <div>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q4" formControlName="q4" id="radiobutton" type="radio" value="1" />1</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q4" formControlName="q4" id="radiobutton" type="radio" value="2" />2</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q4" formControlName="q4" id="radiobutton" type="radio" value="3" />3</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q4" formControlName="q4" id="radiobutton" type="radio" value="4" />4</label>
+  <label [class]="class2"><input [attr.disabled]=disableState [(ngModel)]="Q4" formControlName="q4" id="radiobutton" type="radio" value="5" />5</label>
+  </div>
+  
+  <div class="commentsection">
+  <label for="comments3" [class]="class4">Additional comment :</label>
+  <span>
+   <textarea #comments3 [formControlName]=formName [attr.disabled]=disableState name="comments" id="comments3" rows="4"  >{{feedbackComment}}</textarea>
+  </span>
+  </div>
+  <input *ngIf="!issEdit" type="submit" (click)="submitform()" [class]="class5" value="Submit1" />
+  <input *ngIf="issEdit" type="submit" (click)="onUpdate(comments3.value)" [class]="class5" value="Submit2" />
+  <input type="button" value="Cancel" />
+  <input (click)="editForm()" *ngIf="issEdit" type="button" value="Edit"/>
+  </section>
+  </div>
+  </form>
+  
+  
+  </div>

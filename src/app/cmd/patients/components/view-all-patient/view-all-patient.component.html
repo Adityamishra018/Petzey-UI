@@ -1,0 +1,56 @@
+<!-- 
+<div class="sidebar">
+    <app-sidebar></app-sidebar>
+ </div> -->
+ <div class="sidebar col-sm-2">    
+   <h2 > 
+       <span class="icon1 glyphicon glyphicon-align-right icon-color" ></span>     
+       <a href="viewallappointments"><span class="glyphicon glyphicon-stats icon-color"></span></a>    
+        <a href="patient"><span class="glyphicon glyphicon-user icon-color"></span></a>     
+        <a href="settings"><span class="glyphicon glyphicon-cog icon-color"></span></a> 
+       </h2>
+   </div>
+<div class="topbar">
+    <app-top-header></app-top-header>
+</div>
+
+
+
+
+<div class="patient-list-wrapper">
+    <div class="search-container">
+        <div class="patient-title">Patient</div>
+        <div class="search-sort"> 
+              <div class="search input-group">
+                <span class="input-group-text" id="basic-addon1"><i class=" search-icon fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <div class="sort-label">sort by:</div>
+              <select class="sort form-select form-select-sm " aria-label=".form-select-lg example">
+                <option value="new">New Appointment</option>
+                <option value="old">Old Appointment</option>
+              </select>
+              
+        </div>
+    </div>
+    <div class="patient-list-container">
+        <div class="patient" *ngFor="let patientInfo of patients">
+            <div class="patient-card-wrapper" (click)="patientCardClicked(patientInfo.patientId)">
+                <div class="patient-details">
+                    <img class="patient-img" src={{patientInfo.imageurl}}>
+                    <div class="patient-info">
+                        <div class="patient-name">{{patientInfo.name}}</div>
+                        <div class="patient-location">{{patientInfo.location}}</div>
+                        <div class="patient-mobile">{{patientInfo.phone}}</div>
+                    </div>
+                </div>
+                <i class="patient-edit-icon fa-solid fa-pencil"></i>
+                <div class="patient-action-icons-wrapper">
+                    <i class="patient-action-icon fa-solid fa-lungs"></i>
+                    <i class="patient-action-icon fa-solid fa-user-injured"></i>
+                    <i class="patient-action-icon fa-solid fa-heart-pulse"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

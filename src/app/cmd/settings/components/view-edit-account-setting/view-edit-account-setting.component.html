@@ -1,0 +1,121 @@
+
+  <div class="slide">
+  <input type="checkbox" class="toggle-check" id="toggle" hidden>
+  <label class="toggle" for="toggle">
+  <span class="menu-trigger">
+    <i class="menu-trigger-bar top"></i>
+    <i class="menu-trigger-bar middle"></i>
+    <i class="menu-trigger-bar bottom"></i>
+  </span></label>
+  <div class="slidemenu">
+    <nav class="menu">
+      <ul>
+        <br><br>
+        <li>
+          <a href="viewallappointments"><fa-icon [icon]="faChartSimple" class ="fa-1x"></fa-icon> <span> </span></a>
+        </li>
+        <li>
+   <a href="patient"><fa-icon [icon]="faUser" class="fa-1x" ></fa-icon> <span></span></a>
+
+        </li>
+        <!-- <li>
+          <fa-icon [icon]="faMessage" class="fa-1x" ></fa-icon><span>Chat Room</span>
+        </li> -->
+        <li class="active1">
+          <a href="settings"><fa-icon [icon]="faGear" class="fa-1x" ></fa-icon><span></span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<section>
+
+<div class="container">
+  <div class="headPart">
+     <div class="status">
+       <div class="statusDetails" (click)="drop(dropdwon)">
+      <h4><fa-icon [icon]="faBell" class="fa-1x" ></fa-icon>&nbsp;&nbsp;
+        John Doe &nbsp;&nbsp; <fa-icon [icon]="faChevronDown" class="fa-1x" >&nbsp;</fa-icon></h4>
+        &nbsp;<img src="{{img}}" alt="" srcset="" style="width: 25px; height: 25px; border-radius: 100%;">
+    </div>
+     <div  id="drop" class="{{dropdwon}}">
+                        <ul  onclick="list()" >
+                          <li>
+                            Status:Online
+                            <div class="divd"></div>
+                          </li>
+                            <li>
+                               AccountSettings
+                                <div class="divd"></div>
+                            </li>
+                            <li>
+                                Profile
+                                <div class="divd"></div>
+                            </li>
+                          <li >
+                            <a  [routerLink]="['/landing']" >Logout</a>
+                          </li>
+
+                        </ul>
+                </div>
+  </div>
+  </div>
+  <div class="bottom">
+  <div class="leftPart">
+     <h1>Account Settings</h1>
+    <!-- <h4>Availability Settings</h4> -->
+  </div>
+  <div class="rigtPart">
+    <div class="profile">
+
+
+     <input type="file"  id="fileInput" accept=".png, .jpg, .jpeg" (change)="onSelectFile($event)"/>
+     <img src={{img}}  alt="" srcset="" >
+     <label for="imageUpload"></label>
+      <fa-icon [icon]="faCamera" class="fa-1x camera" (click)="delete()"></fa-icon>
+     <fa-icon [icon]="faTrash" class="fa-1x delete" (click)="delete()"></fa-icon>
+</div>
+<div class="details">
+  <button (click)="edit(button)" >{{button}}</button>
+  <form >
+
+    <div class="data">
+      <div class="info">
+        <h1>Name</h1>
+        <h1 style="color: #18385C;">Dr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+          <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+        </svg></h1>
+        <input type="text" placeholder="" id="name" name="name"  class="{{active}}">
+      </div>
+      <div class="info">
+        <h1>Email &nbsp;&nbsp;&nbsp;</h1>
+        <input type="email" placeholder="" id="name" name="email"  class="{{active}}">
+        <h2 class="{{active2}}">
+          sammywin@doctor.com
+        </h2>
+         <div class="info">
+          <h1>Phone no</h1>
+          <input type="text" placeholder="" id="name" name="name"  class="{{active}}">
+          <h2  class="{{active2}}">9123456</h2>
+        </div>
+      </div>
+        <div class="info">
+          <h1>speciality</h1>
+        <input type="text" placeholder="" id="name" name="name"  class="{{active}}">
+        <h2  class="{{active2}}">Cardiologist</h2>
+        </div>
+      <div class="info">
+         <h1>NPl no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+        <input type="text" placeholder="" id="npinum" name="name"  class="{{active}}">
+      </div>
+      <div class="info" style="margin-left: -3em;">
+         <h1>Practice Location</h1>
+        <input type="text" placeholder="" id="npinum" name="name"  class="{{active}}">
+      </div>
+    </div>
+  </form>
+</div>
+  </div>
+</div>
+</div>
+</section>

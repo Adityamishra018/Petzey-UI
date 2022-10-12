@@ -1,0 +1,121 @@
+
+
+    <div class="sidebar col-sm-2">    
+        <h2 > 
+            <span class="icon1 glyphicon glyphicon-align-right icon-color" ></span>     
+            <a href="viewallappointments"><span class="glyphicon glyphicon-stats icon-color"></span></a>    
+             <a href="patient"><span class="glyphicon glyphicon-user icon-color"></span></a>     
+             <!-- <a href="viewchat"><span class="glyphicon glyphicon-comment icon-color"> ChatRoom</span></a>      -->
+             <a href="settings"><span class="glyphicon glyphicon-cog icon-color"></span></a> 
+            </h2>
+        </div>
+
+        <div class="header">
+            <div class="col-sm-14">
+                <app-top-header></app-top-header>
+                </div>
+                </div>
+
+<div class="whole">
+    <div class="row" >
+    <!-- *ngIf="patientInfo.patientid == patid.patientid"> -->
+        <div class ="col-sm-4" >
+            <img class="logo" src={{patientInfo.imageurl}}>
+        </div>
+        <div class="col-sm-4">
+
+            <p class="peter"><b>{{patientInfo.name}}</b></p>
+            <p class="tel">Tel:{{patientInfo.phone}}</p>
+
+            <span class="material-icons blue-color 1"> chat</span>
+            <span class="material-icons blue-color 1"> phone</span>
+            <span class="material-icons blue-color 3"> video_call</span>
+
+
+        </div>
+        <!--<div class="col-sm-4">
+            <div class="box">
+                <span class="material-icons blue-color 2"> alarm_add</span>
+                <p> Book New</p>
+            </div>
+        </div>-->
+        <div class="row hea">
+            <div class="col-sm-3">
+                <div class="line">
+                    <p class="heading">info </p>
+                    <p>{{patientInfo.DOB}}</p>
+                </div>
+                <P> {{patientInfo.height}} <span class="material-icons red-color ">bloodtype </span>{{patientInfo.bloodgroup}}</P>
+
+
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <p class="heading">Allergies </p>
+                    <p>{{patientInfo.allergies}}</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="line">
+                    <p class="heading">Active Issues </p>
+                    <p>{{patientInfo.activeissues}}</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <p class="heading">Medical Problems </p>
+                <p> {{patientInfo.medicalproblems}}</p>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+ <h1 class="demoText">Appointments/Consultation</h1>
+ 
+ <div class="grid-container">
+    <div class="grid-item1">
+        <app-symptoms></app-symptoms>
+    </div>
+    <div class="grid-item2">
+        <app-appointment-history></app-appointment-history>
+    </div>
+    <div class="grid-item3">
+    <app-prescription-history></app-prescription-history>
+</div> 
+</div>
+
+<!-- <div id="demo1">
+    <table>
+        <tr>
+            <td id="demoSymp">
+                <app-symptoms></app-symptoms>
+            </td>
+            <td > -->
+
+                <!-- <nav id="demoApp">
+                    <app-appointment-history></app-appointment-history>
+                </nav> -->
+
+
+                
+            <!-- </td> -->
+            <!-- <td id="demopre">
+                <app-prescription-history></app-prescription-history>
+            </td>
+        </tr>
+    </table>
+</div> -->
+
+
+<!-- <div class="sympt">
+    <app-symptoms></app-symptoms>
+</div>
+
+<div class="appoin">
+    <app-appointment-history></app-appointment-history>
+</div>
+
+<div class="pres">
+    <app-prescription-history></app-prescription-history>
+</div> -->

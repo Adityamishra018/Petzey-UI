@@ -1,0 +1,33 @@
+.main{
+   
+  display: flex;
+  align-items: center;
+  
+ 
+}
+.radio-inline{
+  margin:0px 40px 20px 0px;
+  cursor: pointer;
+  color: darkblue;
+}
+.color{
+  color: darkblue;
+}
+.para{
+  color:darkblue;
+}
+.button{
+  background-color: darkblue;
+  color: white;
+}
+section{
+  background-color: aliceblue;
+  border-color: 1px solid black;
+  height: 60%;
+ padding: 15px;
+  border-radius: 12px;
+}
+.commentsection{
+display: flex;
+flex-direction: column;
+}

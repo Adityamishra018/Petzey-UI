@@ -1,0 +1,73 @@
+<div class="container">
+  <div>
+    <button class="btn-light-sm" (click)="changeScreen()" style="padding: 0 10px 0 5px;">Back to appointments</button>
+  </div>
+  <form [formGroup]="appointmentForm" (submit)="submitForm()">
+    <mat-card class="inline-calender">
+      <mat-calendar [selected]="appointmentForm.get('appointmentDate').value" (selectedChange)="updateFormDate($event)">
+      </mat-calendar>
+      <!-- <span *ngIf="!appointmentForm.get('date').value">Select a date of Appointment</span> -->
+    </mat-card>
+    <div class="row">
+      <div class="col-sm-2" style="padding-top: 10px" *ngFor="let time of timeArray">
+        <div class="btn" [class]="
+            appointmentForm.get('appointmentTime').value == time
+                  ? 'btn-primary'
+                  : 'btn-light'
+              " (click)="updateFormTime(time)">
+          {{ time }}
+        </div>
+      </div>
+    </div>
+    <div style="padding: 0 10px 0 10px;">
+      <h3>Patient Details</h3>
+    </div>
+    <div>
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>Pet Parent</mat-label>
+        <input matInput formControlName="parent" [matAutocomplete]="autoParent">
+        <mat-autocomplete #autoParent="matAutocomplete" [displayWith]="displayFnParent"
+          (optionSelected)="getAllOwnerPets()">
+          <mat-option *ngFor="
+            let parent of petParents | filterPipe: appointmentForm.get('parent').value
+            " [value]="parent">
+            {{parent.parentName}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field> -->
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Pet Name</mat-label>
+        <input matInput formControlName="pet" [matAutocomplete]="autoPet"
+          [disabled]="!appointmentForm.controls['parent'].valid">
+        <mat-autocomplete #autoPet="matAutocomplete" [displayWith]="displayFnForpet">
+          <!-- <mat-option *ngFor="
+            let pet of petList | filterPipe: appointmentForm.get('pet').value
+            " [value]="pet">
+            {{pet.petName}}
+          </mat-option> -->
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div style="padding: 0 5px 0 5px;">
+      <h3>Other Details</h3>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Issue</mat-label>
+        <input matInput formControlName="issue">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Reason</mat-label>
+        <textarea matInput formControlName="reason"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>

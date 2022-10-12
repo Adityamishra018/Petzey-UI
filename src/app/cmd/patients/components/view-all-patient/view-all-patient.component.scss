@@ -1,0 +1,126 @@
+.patient-list-wrapper {
+    height: 100%;
+    width: 100%;
+    margin-left: 40px;
+    .search-container {
+        height: 50px;
+        width: 100%;
+        background-color: rgb(230, 227, 227);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .patient-title {
+            font-size: 26px;
+            padding: 8px;
+            font-weight: 500;
+        }
+        .search-sort {
+           display: flex;
+           align-items: center;
+           width: 75%;
+           .search {
+               .search-icon {
+                color: #dee2e6;
+               }
+               
+               width: 150%;
+           }
+           .sort-label {
+               margin-left: 20px;
+               width: 170px;
+           }
+        }
+    }
+    .patient-list-container {
+        height: calc(100% - 50px);
+        width: 100%;
+        background-color: rgb(230, 227, 227);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .patient {
+            margin: 10px;
+        }
+        overflow: auto;
+    }
+    .patient-card-wrapper {
+        width: 300px;
+        height: 120px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        color: gray;
+        position: relative;
+        cursor: pointer;
+        .patient-details {
+            display: flex;
+            height: 250px;
+            align-items: center;
+            .patient-img {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                //padding: 6px;
+                margin-left: 6px;
+                margin-right: 20px;
+            }
+            .patient-name {
+                font-size: 16px;
+                font-weight: bold;
+                color: black;
+                opacity: .8;
+                padding-bottom: 8px;
+            }
+            .patient-location {
+                font-size: 12px;
+                padding-bottom: 8px;
+            }
+            .patient-mobile {
+                font-size: 12px;
+                padding-bottom: 8px;
+            }
+        }
+        .patient-edit-icon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 10px;
+        }
+        .patient-action-icons-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+            //padding: 6px;
+            //padding-top: 10px;
+            border-top: 1px solid rgb(238, 238, 238);
+            .patient-action-icon {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.sidebar{
+         
+    width: 3%;
+    height: 100%;
+    
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#18385c;
+    padding-top: 15px;
+    // margin-top: 44px;
+   }
+  .sidebar a{
+       margin: 3px 5px 5px 3px;
+       text-decoration: none;
+       color: white;
+       display: block;
+   }
+  .sidebar a:hover
+  {
+       color: rgb(76, 71, 71);
+       border-color: #dddddd !important;
+  }
+

@@ -1,0 +1,550 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-9 col-sm-12 mt-4 ml-5">
+            <div class="icon-container-style">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+                <button (click)="Navigate()">Back to appointments</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-9 col-sm-12 mt-4 ml-5" style="padding-left:30px;">
+            <h1>
+                #ID{{appointmentDetails.AppointmentId}}
+            </h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+            </svg>&nbsp;
+            <span>{{appointmentDetails.AppointmentDate | date:'mediumDate'}}</span>&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock"
+                viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+            </svg>&nbsp;
+            <span class="ml-3">{{appointmentDetails.AppointmentTime }}</span><br>
+            <div class="icon" style="float: right;">
+                <a href="viewchats">
+                    <svg style="color: rgb(233, 144, 12);" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                        fill="currentColor" class="bi bi-chat-right-text-fill icons" viewBox="0 0 16 16">
+                        <path
+                            d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353V2zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1zm0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
+                    </svg>
+                </a>&nbsp;&nbsp;
+                <a href="audiocall">
+                    <svg style="color:  rgb(233, 144, 12);" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                        fill="currentColor" class="bi bi-telephone-fill icons" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </a>&nbsp;&nbsp;
+                <a href="videocall">
+                    <svg style="color:  rgb(233, 144, 12);" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                        fill="currentColor" class="bi bi-camera-video-fill icons" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2V5z" />
+                    </svg>
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-light" (click)="CancelApp()">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-light" (click)="ConfirmAppointment()">Confirm</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" (click)="CloseApp()">Close Appointment</button>
+            </div>
+            
+            <div class=" d-flex flex-row mt-2">
+                <b class="mr-3">Pet Issues:</b>
+                <p id="pet"> {{appointmentDetails.Issue}}</p>
+            </div>
+            <div class="d-flex flex-row mt-2">
+                <b>Reason for visit:</b>
+                <p style="margin-left: 10px;">{{appointmentDetails.Reason}}</p>
+            </div> <br>
+
+        </div>
+        <div class="d-flex flex-row m-2">
+
+        </div>
+
+        <!-- <p>Confirmed by Jane Doe</p> -->
+    </div>
+    <hr>
+    <div class="container d-flex flex-row petcard-vd">
+        <div class="card shadow mb-5 bg-white rounded col-ml-7 col-lg-7 clo-xl-7" style="height: 270px;">
+            <div class="d-flex flex-row" style="margin: 30px;">
+                <div class="card1">
+                    <div class="sub-card d-flex flex-row" style="height: 100px;">
+                        <img style="width: 100px;
+                        height: 100px;" src="../../assets/PetIcon.png" id="dog" alt="">
+                        <div class="inner-div pl-2 ">
+                            <p> Patient </p>
+                            <b >{{petDetails.PetName}} </b>
+                            <p>{{petDetails.Species}}, {{petDetails.PetBreed}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p>Gender :</p>
+                        <p>{{appointmentDetails.Pet.Gender}}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p>Age :</p>
+                        <!-- <p> {{appointmentDetails.Pet.DOB | ageFilter}}</p> -->
+                    </div>
+                    <div class="d-flex flex-row">
+                        <p>Allergies :</p>
+                        <p> {{petDetails.Allergies}}</p>
+                    </div><div class="d-flex flex-row">
+                        <p>Blood Group :</p>
+                        <p> {{petDetails.BloodGroup}}</p>
+                    </div>
+                </div>
+                <div class="card2" style="padding-left:30%;">
+                    <div class="sub-card d-flex flex-row" style="height: 100px;">
+                        <img  src="../../assets/petparent.png" id="PetParent" alt="" style="height:70;width:70">
+                        <div class="inner-div pl-2">
+                            <p > Pet Owner</p>
+                            <b> {{petDetails.Owner.PetParentName}}</b>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>
+                        </div>
+                        <p style="padding-left: 10px;">{{petDetails.Owner.ContactInfo.Email}}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                        </div>
+                        <p style="padding-left: 10px">{{petDetails.Owner.ContactInfo.MobileNumber}}</p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-door" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                            </svg>
+                        </div>
+                        <p style="padding-left: 10px">
+                            {{petDetails.Owner.ContactInfo.State}},{{petDetails.Owner.ContactInfo.City}},
+                            {{petDetails.Owner.ContactInfo.Pincode}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card shadow mb-5 bg-white rounded col-ml-5 col-lg-5 col-xl-5"
+            style="height: 270px; margin-left: 10px;">
+            <div class="d-flex flex-row" style="padding: 30px;">
+                <div class="card1">
+                    <div class="sub-card d-flex flex-row" style="height: 50px;">
+                        <img style="height:100px; width:100px" src="../../assets/HeaderVet.jpg" id="dog" alt="">
+                        <div class="inner-div ml-5">
+                            <p> Doctor</p>
+                            <b>{{vetDetails.VetName}}</b>
+                            <p>{{vetDetails.Speciality}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row" style="padding: 30px;">
+                <div>
+                    <p>NPI No : {{vetDetails.NPINum}}</p>
+                    
+                </div>
+                <div>
+                    <div class="d-flex flex-row" style="margin-left: 10px;">
+                        <svg style="margin-top: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg>
+                        <p class="ml-1" style="width: 144px;">{{vetDetails.VetContactInfoDTO.EmailId}}</p>
+                    </div>
+
+                    <div class="d-flex flex-row">
+                        <div class="d-flex flex-row" style="margin-left: 10px;">
+                            <svg style="margin-top: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            <p>{{vetDetails.VetContactInfoDTO.PhoneNum}}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex flex-row">
+
+        <h3>Appointment Report</h3>
+        <div style="margin-left: 50%; margin-bottom:30px;">
+            <button type="button" class="btn btn-light">Report</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn" style="background-color: orange;">Edit Report</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ">
+                <div class="card shadow p-2 mb-3" style="width: 49%; float: left;height:637px;">
+
+                    <div class="col-md">
+                        <h3><strong> Prescription </strong></h3>
+                        <div class="col-12 medicine">
+                            <div class="card shadow">
+                                <div class="col-xxl m-0 p-2"
+                                    *ngFor="let medicine of appointmentDetails.Prescription.MedicineDTOs">
+                                    <div>
+                                        <p>1.<span>{{medicine.MedicineName}}</span></p>
+
+                                    </div>
+                                    <div style="width: 50%; float: left;">
+                                        <p>Days : {{medicine.Days}}</p>
+                                        <p>Comments : {{medicine.AdditionalComments}}</p>
+                                        <p>Time Of Day: {{medicine.TimeOfDay}}</p>
+
+                                    </div>
+                                    <button type="button" class="btn btn-dark"
+                                        style="float: right;border-radius: 50px;height:35px">
+                                        {{medicine.Intake}}</button>
+                                    <br><br>
+                                    <div class="box" style="float: right;">
+                                        <div class="shri">
+                                            <div class="ratna check">
+                                                <i class="fa-solid fa-circle-check"></i><span>----</span>
+                                            </div>
+                                            <div class="ratna circle">
+                                                <i class="fa-solid fa-circle-dot"></i><span>----</span>
+                                            </div>
+
+                                            <div class="ratna check">
+                                                <i class="fa-solid fa-circle-check"></i><span></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card shadow">
+                                <div class="col-xxl m-0 p-2">
+                                    <div>
+                                        <p>1.<span>Crocine</span></p>
+
+                                    </div>
+                                    <div style="width: 50%; float: left;">
+                                        <p>Days : 10</p>
+                                        <p>Dont use hot water to consume tablets</p>
+
+                                    </div>
+                                    <button type="button" class="btn btn-dark"
+                                        style="float: right;border-radius: 50px;height:35px">Before
+                                        Food</button>
+                                    <br><br>
+                                    <div class="box" style="float: right;">
+                                        <div class="shri">
+                                            <div class="ratna check">
+                                                <i class="fa-solid fa-circle-check"></i><span>----</span>
+                                            </div>
+                                            <div class="ratna circle">
+                                                <i class="fa-solid fa-circle-dot"></i><span>----</span>
+                                            </div>
+
+                                            <div class="ratna check">
+                                                <i class="fa-solid fa-circle-check"></i><span></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow p-2 mb-3 ml-2" style="width: 49%; float: right;height: 184px;">
+                    <div class="col-md">
+                        <div class="col">
+                            <h3> <strong>Vitals</strong> </h3>
+
+                            <div class="col-xxl m-0 p-2">
+                                <div>
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <span class="text-centre">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/A_perfect_SVG_heart.svg/2224px-A_perfect_SVG_heart.svg.png"
+                                                    style="height: 25px; width: 25px;" alt="">
+                                            </span>
+                                            <br>
+                                            <span>
+                                                {{appointmentDetails.Vital.Ecg}}
+                                                &nbsp;
+                                                BPM
+                                            </span>
+                                        </div>
+
+                                        <div class="col-lg-3 offset-1">
+
+                                            <span class="text-centre">
+                                                <img src="data:image/png;base64,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"
+                                                    style="height: 25px; width: 25px;" alt="">
+                                            </span>
+                                            <br>
+                                            <span>
+                                                {{appointmentDetails.Vital.Temperature}}
+                                                &nbsp;
+                                                ℃
+                                            </span>
+                                        </div>
+
+                                        <div class="col-lg-3">
+                                            <span class="text-centre">
+                                                <img src="data:image/png;base64,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"
+                                                    style="height: 25px; width: 25px;" alt="">
+                                            </span>
+                                            <br>
+                                            <span>
+                                                {{appointmentDetails.Vital.Respiration_rate}}
+                                                &nbsp;
+                                                BPM
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card shadow  p-2 mb-3" style="width: 49%; float: right;">
+                    <div class="col-md">
+                        <div class="container d-flex flex-row width:80%">
+                            <h3><strong>Symptoms</strong> </h3>
+                            <mat-card-actions>
+                                <button class="btn btn-danger Edit ml-10" style="float:right"
+                                    (click)="OnClick()">Edit</button>
+                            </mat-card-actions>
+                        </div>
+                        <form class="example-form" [formGroup]="SymptomForm" (submit)="submitSymptomForm()">
+                            <div class="container {{DisplayDropDown}}">
+                                <mat-label>select symptom</mat-label>
+                                <select id="select-menu" class="bx--text-input"
+                                    (change)="DisplaySymptom($any($event.target).value)">
+                                    <option *ngFor="let Symptom of Symptoms" [value]="Symptom.Name">
+                                        {{Symptom.Name}}</option>
+                                </select>
+                            </div>
+                            <div class="container d-flex flex-row" *ngFor="let symptom of SymptomName">
+                                <span>
+                                    <button type="button" class="butn {{displaySymptom}} ">{{symptom}}
+                                    </button>&nbsp;&nbsp;
+                                </span>
+                            </div>
+
+                        </form>
+                        <mat-card-actions>
+                            <button class="btn btn-primary" (click)="submit()">Submit</button>
+                        </mat-card-actions>
+
+                    </div>
+                </div> -->
+                <!-- <div class="card shadow  p-2 mb-3" style="width: 49%; float: right;">
+                    <div class="col-md">
+
+                        <div class="d-flex flex-row">
+                            <h3><strong>Symptom</strong></h3>
+                            <mat-card-actions style="float:right;padding-left: 350px;">
+                                <button class="btn btn-danger Edit ml-10" 
+                                    (click)="OnClick()">Edit</button>
+                            </mat-card-actions>
+                        </div>
+                        <form class="example-form" [formGroup]="TestForm">
+                            <div class="container d-flex flex-row">
+                                <div class="container symptomdropdown{{DisplayDropDown}}">
+                                    <mat-label>Select Symptom</mat-label>
+                                    <select id="select-menu" class="bx--text-input"
+                                        (change)="DisplaySymptom($any($event.target).value)">
+                                        <option *ngFor="let Symptom of Symptoms" [value]="Symptom.Name">
+                                            {{Symptom.Name}}</option>
+                                    </select>
+                                </div>
+                                <div class="container" *ngFor="let symptom of SymptomName">
+                                    <span>
+                                        <button type="button" class="butn {{displaySymptom}} ">{{symptom}}
+                                        </button>&nbsp;&nbsp;
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <mat-card-actions>
+                            <button class="btn btn-primary" (click)="submit()">Submit</button>
+                        </mat-card-actions>
+                    </div>
+                </div> -->
+                <div class="card shadow  p-2 mb-3" style="width: 49%; float: right;height:210px">
+                    <div class="col-md" style="margin:2px 2px 3px 3px;">
+
+                        <div class="d-flex flex-column">
+                            <h3 style="height:40px;"><strong>Symptom</strong></h3>
+                            <div style="height:40px;">
+                                <div class="{{DisplayDropDown}}">
+                                    <mat-label class="mt-2">Select Symptom</mat-label>
+                                    <select id="select-menu" style="width:120px;height:30px;" class="ml-3"
+                                        (change)="DisplaySymptom($any($event.target).value)">
+                                        <option *ngFor="let Symptom of Symptoms" [value]="Symptom.Name">
+                                            {{Symptom.Name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <form class="example-form" [formGroup]="SymptomForm">
+                                <div class=" d-flex flex-row">
+                                    <div style="height: 40px;" *ngFor="let symptom of SymptomName">
+                                        <span>
+                                            <button type="button" class="butn mr-2 {{displaySymptom}} ">{{symptom}}
+                                            </button>&nbsp;
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <button class="btn btn-danger" (click)="OnClick()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                  </svg>
+                            </button>
+                            <button class="btn btn-primary ml-3" (click)="submit()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+                                <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+                              </svg>
+                            </button>
+                            <button class="btn btn-primary ml-3" style="float:right"
+                                (click)="SubmitSymptom()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg></button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card shadow  p-2 mb-3" style="width: 49%; float: right;height:210px">
+                    <div class="col-md" style="margin:2px 2px 3px 3px;">
+
+                        <div class="d-flex flex-column">
+                            <h3 style="height:40px;"><strong>Test</strong></h3>
+                            <div style="height:40px;">
+                                <div class="{{DisplayTestDropDown}}">
+                                    <mat-label class="mt-2">Select Test</mat-label>
+                                    <select id="select-menu" style="width:120px;height:30px;" class="ml-3"
+                                        (change)="DisplayTest($any($event.target).value)">
+                                        <option *ngFor="let Test of Tests" [value]="Test.Name">
+                                            {{Test.Name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <form class="example-form" [formGroup]="TestForm">
+                                <div class=" d-flex flex-row">
+                                    <div style="height: 40px;" *ngFor="let Test of TestName">
+                                        <span>
+                                            <button type="button" class="butn mr-2 {{displayTest}} ">{{Test}}
+                                            </button>&nbsp;
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <button class="btn btn-danger" (click)="OnClickTest()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                  </svg>
+                            </button>
+                           
+                            <button class="btn btn-primary ml-3" style="float:right" (click)="submitTest()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+                                    <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-primary ml-3" (click)="SubmitTest()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="container mb-3">
+          <div class="card shadow shadow p-2" style="width: 49%; float: left;">
+    
+             <div class="col-md">
+              <div class="col-6 ">
+                <h4>Recommended Clinic</h4>
+    
+                <div class="col-xs-4 " style="width: 30px; float: left;">
+                  <img
+                    src="https://cdn.vox-cdn.com/thumbor/OXALz932z-WoSa-ahrsVdsKpkZ0=/0x0:1280x800/1200x800/filters:focal(538x298:742x502)/cdn.vox-cdn.com/uploads/chorus_image/image/66260585/googlemaps.5.png"
+                    style="height: 30px; width: 30px; border-radius: 10px;" alt="">
+                </div>
+                <div>
+                  <p>St Jhon Clinic</p>
+                </div>
+                <br><br><br>
+              </div>
+            </div>
+          </div>
+          <div class="card shadow h-100 p-2" style="width: 49%; float: right;">
+            <div class="col-md">
+              <div class="col">
+                <h4>Recommended Doctors</h4>
+                <span>
+                  Dr. John Laney
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  Dr. Lizy McGuire
+                </span>
+                <br><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card shadow mb-5">
+          <div class="col-xxl">
+            <h3>Comments</h3>
+            <div class="col-xs-4 d-flex flex-row" style=" float: left;">
+              <img class="m-3"
+                src="https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?w=2000"
+                style="height: 25px; width: 25px; border-radius: 10px;" alt="">
+              <div>
+                Dr. Jhon Doe &nbsp; 6 hours ago
+                <br>
+                Patient has IBS, Food intake needs to be monitored
+              </div>
+            </div>
+             <div>
+                        <p>Dr. Jhon Doe <span>6 hours ago</span></p>
+                        <p>Patient has IBS, Food intake needs to be monitored</p>
+                    </div>
+    
+    
+          </div>
+        </div>  -->
+</div>

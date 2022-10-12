@@ -1,0 +1,70 @@
+<div mat-dialog-content >
+    <div class="merge">
+        <form [formGroup]="doctorform" class="form-container">
+            <mat-card style="width:300px">
+                <mat-card-header>
+                    <h1>
+                        <mat-card-title>Edit Profile</mat-card-title>
+                    </h1>
+                </mat-card-header>
+                <div>
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width" for="Name">
+                                    <!-- <input formControlName="Name" matInput placeholder="Name" [disabled]="!editable" /> {{doctor.Name}} -->
+                                    <input formControlName="doctor_name" matInput placeholder="Name" value="name"
+                                        [disabled]="true" />
+                                </mat-form-field>
+                            </div> &nbsp;
+                            <div class="col-sm-6">
+                                <mat-form-field class="full-width">
+                                    <!-- <input  formControlName="Email" matInput placeholder="Email" [disabled]="!editable" />{{doctor.Email}} -->
+                                    <input formControlName="doctor_email_id" matInput placeholder="Email" value="name"
+                                        [disabled]="true" />
+                                </mat-form-field>
+                                <mat-form-field class="full-width">
+                                    <!-- <input  formControlName="PhoneNo" matInput placeholder="Phone No" [disabled]="!editable" />{{doctor.PhoneNo}} -->
+                                    <input formControlName="doctor_phone_number" matInput placeholder="Phone No"
+                                        [disabled]="true" type="text" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <!-- <input  formControlName="Speciality" matInput placeholder="Speciality" [disabled]="!editable">{{doctor.Speciality}} -->
+                                    <input formControlName="doctor_speciality" matInput placeholder="Speciality"
+                                        [disabled]="true" />
+                                </mat-form-field>
+                            </div>
+                            &nbsp;
+                            <div class="col-sm-6">
+                                <mat-form-field class="full-width">
+                                    <!-- <input  formControlName="NPIno" matInput placeholder="NPIno" [disabled]="!editable"/>{{doctor.NPIno}} -->
+                                    <input formControlName="doctor_npi_no" matInput placeholder="NPIno"
+                                        [disabled]="true" />
+                                </mat-form-field>
+                            </div>
+                            &nbsp;
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <!-- <input  formControlName="PractiseLocation" matInput placeholder="PractiseLocation" [disabled]="!editable" >{{doctor.PractiseLocation}} -->
+                                    <input formControlName="doctor_practice_location" matInput
+                                        placeholder="PracticeLocation" [disabled]="true" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </div>
+                <div mat-dialog-action [align]="'end'">
+                    <button mat-raised-button color="accent" (click)="OnClick1()" mat-dialog-close>Cancel</button>
+                    &nbsp;
+                    <button style="margin-right:10px;" mat-raised-button color="primary" (click)="OnClick2()"
+                        mat-dialog-save>Confirm</button>
+                </div>
+            </mat-card>
+        </form>
+    </div>
+</div>

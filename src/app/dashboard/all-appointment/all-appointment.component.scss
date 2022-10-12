@@ -1,0 +1,36 @@
+
+/* .icon {
+    border-radius: 20px;
+    background-color: beige;
+} */
+.icon-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.new-appointment {
+    background-color:#ff4405;
+    color:white;
+}
+.select-btn {
+    color: white
+}
+.unSelect {
+    background-color: white;
+}
+.unSelect-btn {
+    color: rgb(5, 5, 67);
+}
+#add-appointment {
+    color:white
+}
+#microsoft-icon {
+    border-radius: 5px 0px 0px 5px
+}
+#calender-icon {
+    border-radius: 0px 5px 5px 0px
+}
+#hr-bottom {
+    margin-top: 0
+}

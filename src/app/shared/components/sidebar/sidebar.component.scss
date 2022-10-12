@@ -1,0 +1,24 @@
+.navbar1{
+	color: white;
+	background: #18385c;
+	padding: 1em;
+	padding-right: 0;
+	height: 100%;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+.active{
+	background-color: white;
+	border-radius: 5px 0px 0px 5px;
+	font-size: 15px;
+	padding: 0.5em;
+	margin-top: 1em;
+}
+.inActive{
+	color: white;
+	font-size: 15px;
+	margin-top: 1.5em;
+	padding-left: 0.1em;
+}
